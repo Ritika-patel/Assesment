@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* ROOT COLORS START */
+:root {
+    --primary-color: #000000;
+    --secondry-color: #F5F5F5;
+}
+/* ROOT COLORS END */
+
+/* USED FOR CENTER START */
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* USED FOR CENTER END */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* SIGNUP START */
+.signup {
+    height: 100vh;
+    top: -786px;
+    left: -2360px;
+    display: flex;
+}
+
+/* LEFT SIDE START */
+.left_side {
+    background-color: var(--primary-color);
+    width: 40.8%;
+}
+
+
+.left_side p {
+    color: #FFFFFF;
+    font-family: 'Montserrat';
+    font-size: 72px;
+    font-weight: 700;
+    letter-spacing: 0em;
+}
+
+/* LEFT SIDE END */
+
+/* RIGHT SIDE START */
+
+.right_side {
+    background: var(--secondry-color);
+    width: 59.2%;
+    height: 100%;
+    flex-direction: column;
+}
+
+
+.block p:first-child {
+    font-family: 'Montserrat';
+    height: 44px;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0em;
+    margin-bottom: 5px;
+}
+
+.block p:nth-child(2) {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0em;
+    margin-bottom: 26px;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 385px;
+}
+
+.options button {
+    height: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #FFFFFF; 
+     align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 10px;
+    border: 0px solid #858585
+}
+
+.tag {
+    font-weight: 100;
+    color: #858585;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.errorMessage{
+    font-weight: 100;
+    color: #858585;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0;
+    height: 10px;
+    text-align: center;
+    color: rgb(235, 140, 140);
+}
+
+.tag img {
+    margin-right: 10px;
+}
+
+.fillform {
+    margin-top: 20px;
+    /* min-width: 385px; */
+    /* height: 317px; */
+    border-radius: 20px;
+    background-color: #FFFFFF;
+}
+
+
+.fillform form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    width: 100%;
+}
+
+.fillform form div {
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    margin-bottom: 20px;
+}
+
+.forminput,
+.formbutton {
+    border: 0px;
+    height: 40px;
+    border-radius: 10px;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    padding-left: 15px;
+}
+.formbutton :disabled{
+    background-color: #353333;
+}
+
+.fillform label {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    margin-bottom: 10px;
+}
+
+.fillform input {
+    background: var(--secondry-color);
+}
+
+.formbutton {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.forgot a {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: #346BD4;
+    text-decoration: none;
+}
+
+.statement {
+    margin-top: 10px;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #858585;
+}
+
+.statement a {
+    color: #346BD4;
+    cursor: pointer;
+}
+
+/* RIGHT SIDE END */
+
+/* RESPONSIVE START */
+@media only screen and (max-width: 712px) {
+    .left_side {
+        width: 0%;
+    }
+    .right_side{
+        width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 428px) {
+    .options,
+    .fillform {
+        width: 330px;
+    }
+
+    form{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        padding: auto;
+        margin: auto;
+    }
+
+  }
+  /* RESPONSIVE END */
+
+  /* SIGNUP END */
