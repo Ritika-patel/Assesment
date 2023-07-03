@@ -52,7 +52,7 @@ const LoginPage = () => {
         />
       </div>
       <div>
-        <label htmlFor="password">Password:</label>
+        <label htmlFor="password">Password</label>
         <input
           value={values.password}
           onChange={onChange}
