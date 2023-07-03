@@ -7,6 +7,7 @@ import { auth } from "../firebase";
 
 const LoginPage = () => {
   const [values, setValues] = useState({ email: "", password: "" });
+  const [errorMsg, setErrorMsg] = useState("")
 
   const onChange = (e) => {
     setValues({
@@ -17,7 +18,7 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (values.email === "" || values.password === "") {
+    if (values.email == "" || values.password == "") {
       return;
     }
     signInWithEmailAndPassword(auth, values.email, values.password)
@@ -25,16 +26,19 @@ const LoginPage = () => {
         // Signed in
         const user = userCredential.user;
         console.log(user);
+        setErrorMsg("")
         // ...
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        setErrorMsg(errorMessage)
       });
   };
 
   return (
     <form onSubmit={handleSubmit}>
+      <div className="Error">{errorMsg}</div>
       <div>
         <label htmlFor="email">Email address</label>
         <input

@@ -103,7 +103,7 @@
     flex-direction: column;
 }
 
-.errorMessage{
+.Error{
     font-weight: 100;
     color: #858585;
     font-family: Montserrat, sans-serif;

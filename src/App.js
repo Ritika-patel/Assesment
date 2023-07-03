@@ -11,13 +11,16 @@ import { auth } from "./firebase";
 function App() {
 const [authenticated, setAuthenticated] = useState('false')
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth,  (user) => {
       if (user) {
-        setAuthenticated(true);
+       setAuthenticated(true);
       } else {
         setAuthenticated(false)
       }
     });
+    return () => {
+      unsubscribe(); // Cleanup function to unsubscribe the listener
+    };
   }, []);
 
   return (

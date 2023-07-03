@@ -7,6 +7,7 @@ import { auth } from "../firebase";
 
 const SignupPage = () => {
   const [values, setValues] = useState({ email: "", password: "", name: "" });
+  const [errorMsg, setErrorMsg] = useState("")
 
   const onChange = (e) => {
     setValues({
@@ -25,17 +26,20 @@ const SignupPage = () => {
         // Signed in 
         const user = userCredential.user;
         console.log(user)
+        setErrorMsg("")
         // ...
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        setErrorMsg(errorMessage)
         // ..
       });
   };
 
   return (
     <form onSubmit={handleSubmit}>
+      <div className="Error">{errorMsg}</div>
       <div>
         <label htmlFor="name">Name</label>
         <input
